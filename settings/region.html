@@ -14,6 +14,7 @@
 
   <!-- CSS Assets -->
   <link rel="stylesheet" href="../css/app.css" />
+  <link rel="stylesheet" href="../css/style.css" />
 
   <!-- Javascript Assets -->
   <script src="../js/app.js" defer></script>
@@ -179,7 +180,7 @@
 
             <ul class="flex flex-1 flex-col px-4 font-inter">
               <li>
-                <a x-data="navLink" href="/"
+                <a x-data="navLink" href="../settings/region.html"
                   :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                   class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                   المناطق
@@ -1197,7 +1198,7 @@
       <div class="grid grid-cols-1 gap-4 sm:gap-5 lg:gap-6">
         <!-- Users Table -->
         <div>
-          <div class="flex items-center justify-between">
+          <div class="card-custom my-5 flex items-center justify-between">
             <div x-data="{showModal:false}">
               <button @click="showModal = true"
                 class="btn bg-slate-150 font-medium text-slate-800 hover:bg-slate-200 focus:bg-slate-200 active:bg-slate-200/80 dark:bg-navy-500 dark:text-navy-50 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90">
@@ -1290,7 +1291,7 @@
 
             </div>
           </div>
-          <div class="card mt-3">
+          <div class="card">
             <div class="is-scrollbar-hidden min-w-full overflow-x-auto">
               <table class="is-hoverable w-full text-right">
                 <thead>

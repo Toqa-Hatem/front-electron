@@ -289,8 +289,8 @@ video {
 }
 :root {
   --margin-x: 1rem;
-  --main-sidebar-width: 4.5rem;
-  --sidebar-panel-width: 230px;
+  --main-sidebar-width: 8.5rem;
+  --sidebar-panel-width: 140px;
   --sidebar-panel-min-width: 64px;
 }
 @media (min-width: 768px) {
@@ -300,8 +300,8 @@ video {
 }
 @media (min-width: 1024px) {
   :root {
-    --main-sidebar-width: 5rem;
-    --sidebar-panel-width: 240px;
+    --main-sidebar-width: 7.5rem;
+    --sidebar-panel-width: 140px;
   }
 }
 @media (min-width: 1280px) {

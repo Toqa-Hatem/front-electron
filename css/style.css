@@ -1,0 +1,20 @@
+.card-custom{
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    background-color: #fff;
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+}
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    background-color: #fff;
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+}
+.nothing-txt{
+    color: red;
+}

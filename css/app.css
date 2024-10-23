@@ -6828,6 +6828,10 @@ button.gridjs-sort-desc {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+.mx-1 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 .my-1 {
   margin-bottom: 0.25rem;
   margin-top: 0.25rem;
@@ -7171,6 +7175,9 @@ button.gridjs-sort-desc {
 }
 .w-full {
   width: 100%;
+}
+.w-half {
+  width: 50%;
 }
 .w-48 {
   width: 12rem;
@@ -8148,6 +8155,9 @@ button.gridjs-sort-desc {
 }
 .bg-info\/10 {
   background-color: rgba(14, 165, 233, 0.1);
+}
+.bg-gray{
+  background-color: #e8e8e8ab;
 }
 .bg-success\/10 {
   background-color: rgba(16, 185, 129, 0.1);

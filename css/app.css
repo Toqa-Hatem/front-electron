@@ -670,7 +670,8 @@ nav.header .header-container {
 }
 @media (min-width: 1280px) {
   .is-sidebar-open .main-content {
-    margin-right: calc(var(--main-sidebar-width) + var(--sidebar-panel-width));
+    margin-right: calc(var(--main-sidebar-width) + 10px);
+    margin-left: 10px;
   }
 }
 .navigation\:sideblock {

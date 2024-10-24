@@ -17,3 +17,6 @@
 .nothing-txt{
     color: red;
 }
+.hidden {
+    display: none;
+}

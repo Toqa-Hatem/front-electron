@@ -1080,7 +1080,7 @@
                     x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95">
                     <div class="flex justify-between rounded-t-lg bg-slate-200 px-4 py-3 dark:bg-navy-800 sm:px-5">
                       <h3 class="text-base font-medium text-slate-700 dark:text-navy-100">
-                        اضف منطقة
+                        اضف فرع
                       </h3>
                       <button @click="showModal = !showModal"
                         class="btn -ml-1.5 h-7 w-7 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
@@ -1101,15 +1101,6 @@
                           <input
                             class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                             placeholder="الإسم بالإنجليزية" type="text" />
-                        </label>
-                        <label class="block">
-                          <span>اختر المحافظة</span>
-                          <select
-                            class="form-select mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent">
-                            <option>القاهرة</option>
-                            <option>السويس</option>
-                            <option>الجيزة</option>
-                          </select>
                         </label>
                         <div class=" space-x-reverse space-x-2 text-right">
                           <button @click="showModal = false"

@@ -78,6 +78,12 @@ table {
   border-color: inherit;
   text-indent: 0;
 }
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+}
 button,
 input,
 optgroup,
@@ -739,13 +745,13 @@ code.inline-code {
   background-color: #202b40;
   color: #ff57d8;
 }
-.is-scrollbar-hidden {
+/* .is-scrollbar-hidden {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 .is-scrollbar-hidden::-webkit-scrollbar {
   display: none;
-}
+} */
 @supports selector(::-webkit-scrollbar) {
   .scrollbar-sm::-webkit-scrollbar {
     height: 0.375rem;
@@ -946,6 +952,9 @@ code.inline-code {
   right: 13px;
   top: calc(50% - 5px);
   transform: rotate(-90deg);
+}
+.fs-5{
+  font-size: 0.5rem;
 }
 .form-checkbox,
 .form-checkbox:before,
@@ -7623,6 +7632,9 @@ button.gridjs-sort-desc {
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
 }
 .gap-3 {
   gap: 0.75rem;

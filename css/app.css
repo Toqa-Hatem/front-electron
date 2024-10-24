@@ -306,7 +306,7 @@ video {
 }
 @media (min-width: 1024px) {
   :root {
-    --main-sidebar-width: 10rem;
+    --main-sidebar-width: 14rem;
     --sidebar-panel-width: 140px;
   }
 }

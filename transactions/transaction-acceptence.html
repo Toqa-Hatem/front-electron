@@ -983,200 +983,701 @@
                 <ul class="hidden flex-wrap items-center space-x-2 space-x-reverse sm:flex">
                     <li class="flex items-center space-x-2 space-x-reverse">
                         <a class="text-primary transition-colors hover:text-primary-focus dark:text-accent-light dark:hover:text-accent"
-                            href="#">المعاملات المقدمة</a>
+                            href="#"> المعاملات</a>
                         <svg x-ignore xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                         </svg>
                     </li>
-                    <!-- <li> </li> -->
+                    <li> نظام الاقساط
+                    </li>
                 </ul>
 
             </div>
-
-            <div class=" filters ">
-                <button
-                    class="btn border border-info font-medium text-info hover:bg-info hover:text-white focus:bg-info focus:text-white active:bg-info/90 ml-3 mt-3">
-                    العدد الكلي (5857)
-                </button>
-
+            <div class="flex">
+                <div class="flex items-center" x-data="{isInputActive:false}">
+                    <label class="block">
+                        <input x-effect="isInputActive === true && $nextTick(() => { $el.focus()});"
+                            :class="isInputActive ? 'w-32 lg:w-48' : 'w-0'"
+                            class="form-input bg-transparent px-1 text-left transition-all duration-100 placeholder:text-slate-500 dark:placeholder:text-navy-200"
+                            placeholder="Search here..." type="text" />
+                    </label>
+                    <button @click="isInputActive = !isInputActive"
+                        class="btn h-8 w-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                </div>
 
             </div>
-            <div class=" card-custom my-5 flex items-center justify-between">
-                <div class="flex ">
-
-
-                    <a
-                      class="btn bg-success font-medium ml-2 text-white hover:bg-success-focus focus:bg-success-focus active:bg-success-focus/90"   href="./archive.html">
-                        الارشيف
-                </a>
+            <div class="card-custom block">
+                <div class="flex">
+                    <label class="block w-full mx-1">
+                        مبلغ الموافقة
+                        <input
+                            class="form-input w-full  rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder="مبلغ الموافقة" type="text" />
+                    </label>
+                    <label class="block w-full mx-1">
+                        تكلفة البضاعة
+                        <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder="تكلفة البضاعة" type="text" />
+                    </label>
+                    <label class="block w-full mx-1">
+                        المقدم
+                        <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder="المقدم" type="text" />
+                    </label>
+                    <label class="block w-full mx-1">
+                        المقدم الاضافي
+                        <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder="المقدم الاضافي" type="text" />
+                    </label>
                 </div>
                 <div class="flex">
-                    <div class="flex items-center" x-data="{isInputActive:false}">
-                        <label class="block">
-                            <input x-effect="isInputActive === true && $nextTick(() => { $el.focus()});"
-                                :class="isInputActive ? 'w-32 lg:w-48' : 'w-0'"
-                                class="form-input bg-transparent px-1 text-left transition-all duration-100 placeholder:text-slate-500 dark:placeholder:text-navy-200"
-                                placeholder="Search here..." type="text" />
-                        </label>
-                        <button @click="isInputActive = !isInputActive"
-                            class="btn h-8 w-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                        </button>
-                    </div>
+                    <label class="block w-full mx-1">
+                        عدد الاقساط
+                        <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder=" عدد الاقساط" type="text" />
+                    </label>
+                    <label class="block w-full mx-1">
+                        المبلغ المقسط
+                        <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder="المبلغ المقسط" type="text" />
+                    </label>
+                    <label class="block w-full mx-1">
+                        اجمالي المقدم
+                        <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder="اجمالي المقدم" type="text" />
+                    </label>
+                    <label class="block w-full mx-1">
+                        بداية أول قسط
+                        <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder="إجمالي المبلغ المقسط" type="text" />
+                    </label>
+                </div>
+                <div class="flex">
+                    <label class="block w-full mx-1">
+                        القسط الشهري
+                        <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder=" القسط الشهري " type="text" />
+                    </label>
+                    <label class="block w-full mx-1">
+                        قسط السينت
+                        <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder="قسط السينت" type="text" />
+                    </label>
+                    <label class="block w-full mx-1">
+                        القسط الداخلي
+                        <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder="القسط الداخلي" type="text" />
+                    </label>
+                    <label class="block w-full mx-1">
+                        بداية أول قسط
+                        <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder="بداية أول قسط  " type="text" />
+                    </label>
+                </div>
+                <div class="flex">
+                    <label class="block w-full mx-1">
+
+                        دفع المقدم
+                        <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder="دفع المقدم " type="text" />
+                    </label>
+                    <label class="block w-full mx-1">
+                        مبلغ اقرار الدين
+                        <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-gray px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder=" مبلغ اقرار الدين
+                  " type="text" />
+                    </label>
+
 
                 </div>
+                <div class="flex">
+                    <label class="block w-full mx-1">
+                        الملاحظات
+                        <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder="  الملاحظات " type="text" />
+                    </label>
+
+                </div>
+                <div class="flex mt-3">
+                    <button
+                        class="btn mx-1 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
+                        طباعة اقرار الدين
+                    </button>
+                    <button
+                        class="btn mx-1 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
+                        طباعة نموذج للموثق
+                    </button>
+                </div>
+
             </div>
-            <div class="card">
-                <div class="  is-scrollbar-hidden min-w-full overflow-x-auto">
-                    <table class="is-hoverable w-full text-right">
-                        <thead>
-                            <tr>
-                                <th
-                                    class="whitespace-nowrap rounded-tr-lg bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
-                                    #
-                                </th>
-                                <th
-                                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
-                                    الإسم العميل
-                                </th>
-                                <th
-                                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
-                                    الوسيط
-                                </th>
 
-                                <th
-                                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
-                                    الراتب
-                                </th>
-                                <th
-                                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
-                                    الوظيفة </th>
-                                <th
-                                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
-البنك                                </th>
-
-                                <th
-                                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
-                               مجموع الاقساط
-                                </th>
-                                <th
-                                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
-                                    التاريخ
-                                </th>
-                                <th
-                                    class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
-                                  تقديم
-                                </th>
-                              
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500">
-                                <td class="whitespace-nowrap  py-3 sm:px-5">
-                                    <p>1</p>
-                                </td>
-                                <td
-                                    class="whitespace-nowrap  py-3 font-medium text-slate-700 dark:text-navy-100 lg:px-2">
-                                    <h5>تقي</h5>
-                                </td>
-                                <td class="whitespace-nowrap  py-3 sm:px-5">
-                                    <h5> الشركة</h5>
-                                </td>
-                                <td class="whitespace-nowrap  py-3 sm:px-5">
-                                    <h5>125233</h5>
-                                </td>
-                                <td class="whitespace-nowrap  py-3 sm:px-5">
-                                    <h5>عسكري</h5>
-                                </td>
-                                <td class="whitespace-nowrap  py-3 sm:px-5">
-                                    <h5>الكويتي</h5>
-                                </td>
-                                <td class="whitespace-nowrap  py-3 sm:px-5">
-                                  000
-                                </td>
-                                <td class="whitespace-nowrap px-2 py-3 sm:px-5">
-                                    <h2>   18/12/2020</h2>
-                                       <button
-                                       class="btn mt-1 bg-slate-150 font-medium text-slate-800 hover:bg-slate-200 focus:bg-slate-200 active:bg-slate-200/80"
-                                       @click="$notification({text:'This is a simple notification',variant:'light'})">
-                                     الملاحظات
-                                   </button>
-                                   </td>
-                                <td class="whitespace-nowrap px-2 py-3 sm:px-5">
-                                    <h5>تقى</h5>
-                                </td>
-                               
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
+            <div class="card-custom block mt-4">
                 <div
-                    class="flex flex-col justify-between space-y-4 px-4 py-4 sm:flex-row sm:items-center sm:space-y-0 sm:px-5">
-                    <div class="flex items-center space-x-2 space-x-reverse text-xs+">
-                        <span>عرض</span>
-                        <label class="block">
-                            <select
-                                class="form-select rounded-full border border-slate-300 bg-white px-2 py-1 pl-6 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
-                        </label>
-                        <span>الصفحات</span>
+                    class="btn w-full bg-info font-medium text-right text-white  focus:bg-info-focus active:bg-info-focus/90">
+                    سلة المنتجات
+                </div>
+                <div class="flex mt-3">
+                    <label class="block w-full mx-1">
+                        الباركود
+                        <input
+                            class="form-input w-full  rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder="الباركود" type="text" />
+                    </label>
+                    <label class="block w-full mx-1">
+                        السريال نمبر <input
+                            class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                            placeholder=" السريال نمبر" type="text" />
+                    </label>
+
+                </div>
+                <button
+                    class="btn mx-1 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
+                    اضافة </button>
+                <hr class="mt-2">
+
+                <div class="card mt-3">
+                    <div class="  is-scrollbar-hidden min-w-full overflow-x-auto">
+                        <table class="is-hoverable w-full text-right">
+                            <thead>
+                                <tr>
+                                    <th
+                                        class="whitespace-nowrap rounded-tr-lg bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
+                                        الصنف
+                                    </th>
+                                    <th
+                                        class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
+                                        الباركود
+                                    </th>
+                                    <th
+                                        class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
+                                        السريال
+                                    </th>
+
+                                    <th
+                                        class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
+                                        العدد
+                                    </th>
+                                    <th
+                                        class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
+                                        التكلفة</th>
+                                    <th
+                                        class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
+                                        البنك </th>
+
+                                    <th
+                                        class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
+                                        السعر
+                                    </th>
+                                    <th
+                                        class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
+                                        <i class="fa-solid fa-trash mx-2"></i>
+                                    </th>
+
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500">
+                                    <td class="whitespace-nowrap  py-3 sm:px-5">
+                                        <p>الاجمالي</p>
+                                    </td>
+                                    <td
+                                        class="whitespace-nowrap  py-3 font-medium text-slate-700 dark:text-navy-100 lg:px-2">
+                                        <h5></h5>
+                                    </td>
+                                    <td class="whitespace-nowrap  py-3 sm:px-5">
+                                        <h5> </h5>
+                                    </td>
+                                    <td class="whitespace-nowrap  py-3 sm:px-5">
+                                        <h5></h5>
+                                    </td>
+                                    <td class="whitespace-nowrap  py-3 sm:px-5">
+                                        <h5>(_0 د . ك)</h5>
+                                    </td>
+                                    <td class="whitespace-nowrap  py-3 sm:px-5">
+                                        <h5>(_0 د . ك)</h5>
+                                    </td>
+                                    <td class="whitespace-nowrap  py-3 sm:px-5">
+                                        000
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    <ol class="pagination">
-                        <li class="rounded-r-lg bg-slate-150 dark:bg-navy-500">
-                            <a href="#"
-                                class="flex h-8 w-8 items-center justify-center rounded-lg text-slate-500 transition-colors hover:bg-slate-300 focus:bg-slate-300 active:bg-slate-300/80 dark:text-navy-200 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="bg-slate-150 dark:bg-navy-500">
-                            <a href="#"
-                                class="flex h-8 min-w-[2rem] items-center justify-center rounded-lg px-3 leading-tight transition-colors hover:bg-slate-300 focus:bg-slate-300 active:bg-slate-300/80 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90">1</a>
-                        </li>
-                        <li class="bg-slate-150 dark:bg-navy-500">
-                            <a href="#"
-                                class="flex h-8 min-w-[2rem] items-center justify-center rounded-lg bg-primary px-3 leading-tight text-white transition-colors hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">2</a>
-                        </li>
-                        <li class="bg-slate-150 dark:bg-navy-500">
-                            <a href="#"
-                                class="flex h-8 min-w-[2rem] items-center justify-center rounded-lg px-3 leading-tight transition-colors hover:bg-slate-300 focus:bg-slate-300 active:bg-slate-300/80 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90">3</a>
-                        </li>
-                        <li class="bg-slate-150 dark:bg-navy-500">
-                            <a href="#"
-                                class="flex h-8 min-w-[2rem] items-center justify-center rounded-lg px-3 leading-tight transition-colors hover:bg-slate-300 focus:bg-slate-300 active:bg-slate-300/80 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90">4</a>
-                        </li>
-                        <li class="bg-slate-150 dark:bg-navy-500">
-                            <a href="#"
-                                class="flex h-8 min-w-[2rem] items-center justify-center rounded-lg px-3 leading-tight transition-colors hover:bg-slate-300 focus:bg-slate-300 active:bg-slate-300/80 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90">5</a>
-                        </li>
-                        <li class="rounded-l-lg bg-slate-150 dark:bg-navy-500">
-                            <a href="#"
-                                class="flex h-8 w-8 items-center justify-center rounded-lg text-slate-500 transition-colors hover:bg-slate-300 focus:bg-slate-300 active:bg-slate-300/80 dark:text-navy-200 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 19l-7-7 7-7" />
-                                </svg>
-                            </a>
-                        </li>
-                    </ol>
+                </div>
 
-                    <div class="text-xs+">1 - 10 of 10 entries</div>
+                <br>
+                <div class=" block mt-5">
+                    <div class="flex">
+                        <label class="block w-full mx-1">
+                            الاسم
+                            <input
+                                class="form-input w-full  rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="الاسم " type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            الرقم المدني
+                            <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" الرقم المدني" type="text" />
+                        </label>
+
+                    </div>
+                    <div class="flex">
+                        <label class="block w-full mx-1">
+                            الاسم الاول (العربيه) <input
+                                class="form-input w-full  rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" الاسم الاول" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            الاسم الثاني (العربيه) <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" الاسم الثاني" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            الاسم الثالث (العربيه)
+                            <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="الاسم الثالث" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            الاسم الرابع (العربيه) <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="الاسم الرابع " type="text" />
+                        </label>
+
+                    </div>
+                    <div class="flex">
+                        <label class="block w-full mx-1">
+                            الاسم الخامس (العربيه) <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="  الاسم الخامس" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            الاسم الاول (الانجليزية) <input
+                                class="form-input w-full  rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" الاسم الاول" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            الاسم الثاني (الانجليزية) <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" الاسم الثاني" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            الاسم الثالث (الانجليزية)
+                            <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="الاسم الثالث" type="text" />
+                        </label>
+
+                    </div>
+                    <div class="flex">
+                        <label class="block w-full mx-1">
+                            الاسم الرابع (الانجليزية)
+                            <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="الاسم الرابع" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            الاسم الخامس (الانجليزية)
+                            <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="الاسم الخامس" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            النوع
+                            <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" النوع" type="text" list="gender" />
+                            <datalist id="gender">
+                                <option value="ذكر ">ذكر</option>
+                                <option value="انثي">انثي</option>
+                            </datalist>
+                        </label>
+                        <label class="block w-full mx-1">
+                            الجنسية <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="  الجنسية  " type="text" list="nationality" />
+                            <datalist id="nationality">
+                                <option value="مصري ">مصري</option>
+                                <option value="مصري">مصري</option>
+                            </datalist>
+                        </label>
+                    </div>
+
+                    <div class="flex">
+                        <label class="block w-full mx-1">
+                            الهاتف <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" الهاتف" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            هاتف العمل <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" هاتف العمل" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            اسم اقرب شخص (1) <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" اسم اقرب شخص" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            هاتف اقرب شخص (1) <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" اسم اقرب شخص" type="text" />
+                        </label>
+                    </div>
+                    <div class="flex">
+                        <label class="block w-full mx-1">
+                            اسم اقرب شخص (2) <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" اسم اقرب شخص" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            هاتف اقرب شخص (2) <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" هاتف اقرب شخص" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            المنطقة <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="   المنطقة" type="text" list="region" />
+                            <datalist id="region">
+                                <option value="بببب ">ببب</option>
+                                <option value="سسس">سسس</option>
+                            </datalist>
+                        </label>
+                        <label class="block w-full mx-1">
+                            القطعة <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" القطعة  " type="text" />
+                        </label>
+                    </div>
+                    <div class="flex">
+                        <label class="block w-full mx-1">
+                            شارع <input
+                                class="form-input w-full  rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="  شارع" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            جادة <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="  جادة" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            مبني
+                            <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="مبني " type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            الدور <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" الدور " type="text" />
+                        </label>
+
+                    </div>
+                    <div class="flex">
+                        <label class="block w-full mx-1">
+                            رقم الشقه <input
+                                class="form-input w-full  rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="  رقم الشقه" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            رقم الالي <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" رقم الالي" type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            جهه العمل
+                            <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-gray px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="  وزاره الداخلية" list="work" />
+                            <datalist id="work">
+                                <option value="وزاره الداخلية ">وزاره الداخلية</option>
+                                <option value="وزاره الداخلية ">وزاره الداخلية</option>
+                            </datalist>
+                        </label>
+                        <label class="block w-full mx-1">
+                            الراتب <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-gray px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" الراتب " type="text" />
+                        </label>
+
+                    </div>
+                    <div class="flex">
+                        <label class="block w-full mx-1">
+                            اسم البنك
+                            <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="   بنك" list="bank" />
+                            <datalist id="bank">
+                                <option value="  "> بنك</option>
+                                <option value="  "> بنك</option>
+                            </datalist>
+                        </label>
+                        <label class="block w-full mx-1">
+                            رقم الحساب البنكي <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" رقم الحساب البنكي  
+           " type="text" />
+                        </label>
+
+                        <label class="block w-full mx-1">
+                            عنوان العمل <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="   عنوان العمل  
+                   " type="text" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            موقع كوين فيندر <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder=" موقع كوين فيندر 
+                            " type="text" />
+                        </label>
+
+                    </div>
+                    <div class="flex">
+                        <label class="block w-full mx-1">
+                            البريد الالكترونى
+                            <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="  البريد الالكترونى " type="text" />
+                        </label>
+
+                    </div>
+
+                    <div class="flex">
+                        <label class="block w-full mx-1">
+                            هويتي
+                            <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="    " type="file" />
+                        </label>
+                        <label class="block w-full mx-1">
+                            هوية العمل
+                            <input
+                                class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                placeholder="    " type="file" />
+                        </label>
+
+                    </div>
+                    <div class="flex">
+                        <label class="block w-full mx-1">
+                            صورة شهادة الراتب
+                            <div
+                                class="w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent">
+                                <img src="../images/100x100.png" alt="" height="70px" width="70px">
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="flex mt-3">
+                        <label class="inline-flex items-center  space-x-reverse space-x-2">
+                            <input
+                                class="form-checkbox is-basic h-5 w-5 rounded border-slate-400/70 checked:bg-primary checked:border-primary hover:border-primary focus:border-primary dark:border-navy-400 dark:checked:bg-accent dark:checked:border-accent dark:hover:border-accent dark:focus:border-accent"
+                                type="checkbox" />
+                            <p>التحقق من هويتي</p>
+                        </label>
+                    </div>
+                </div>
+                <hr class="mt-5">
+
+
+                <div x-data="{expandedItem:null}" class="mt-5 flex flex-col">
+                    <div x-data="accordionItem('item-1')">
+                        <div @click="expanded = !expanded"
+                            class="block cursor-pointer items-center py-4 text-base font-medium text-slate-700 dark:text-navy-100">
+                            <p>البيانات االشخصية <span style="color: rgb(176, 176, 176);">( قم بالضغط هنا لاظهار
+                                    البيانات الشخصية)</span></p>
+                            <h4>نظام الأقساط</h4>
+                            <div :class="expanded && '-rotate-180'"
+                                class="text-sm font-normal leading-none text-slate-400 transition-transform duration-300 dark:text-navy-300">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div x-collapse x-show="expanded">
+                            <div>
+                                <div class="is-scrollbar-hidden min-w-full overflow-x-auto">
+                                    <table class="w-full text-right">
+                                        <tbody>
+                                            <tr
+                                                class="border border-transparent border-b-slate-200 dark:border-b-navy-500">
+                                                <th
+                                                    class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
+                                                    الاسم
+                                                </th>
+                                                <td>تقي
+                                            </tr>
+                                            <tr
+                                                class="border border-transparent border-b-slate-200 dark:border-b-navy-500">
+                                                <th
+                                                    class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
+                                                    الرقم المدني
+                                                </th>
+                                                <td>266043000658
+
+                                            </tr>
+                                            <tr
+                                                class="border border-transparent border-b-slate-200 dark:border-b-navy-500">
+                                                <th
+                                                    class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
+                                                    الهاتف </th>
+                                                <td>55583614
+
+
+                                            </tr>
+                                            <tr
+                                            class="border border-transparent border-b-slate-200 dark:border-b-navy-500">
+                                            <th
+                                                class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
+                                                البنك	
+                                            </th>
+                                            <td>بنك بيت التمويل الكويتي
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <button
+                                    class="btn mt-5 bg-info font-medium text-white hover:bg-info-focus focus:bg-info-focus active:bg-info-focus/90"
+                                  >
+                                    الاعتماد و رفع العقود
+                                  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div x-data="{expandedItem:null}" class="mt-5 flex flex-col">
+                    <div x-data="accordionItem('item-1')">
+                        <div @click="expanded = !expanded"
+                            class="block cursor-pointer items-center py-4 text-base font-medium text-slate-700 dark:text-navy-100">
+                            <p> ملفات الساينت <span style="color: rgb(176, 176, 176);">( قم بالضغط هنا لاظهار
+                                    البيانات الشخصية)</span></p>
+                            <!-- <h4> ملفات ال</h4> -->
+                            <div :class="expanded && '-rotate-180'"
+                                class="text-sm font-normal leading-none text-slate-400 transition-transform duration-300 dark:text-navy-300">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div x-collapse x-show="expanded">
+                            <div class="is-scrollbar-hidden min-w-full overflow-x-auto">
+                                <table class="w-full text-right">
+                                  <thead>
+                                    <tr class="border border-transparent border-b-slate-200 dark:border-b-navy-500">
+                                      <th
+                                        class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5"
+                                      >
+                                        #
+                                      </th>
+                                      <th
+                                        class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5"
+                                      >
+                                      الجهة
+                                      </th>
+                                      <th
+                                        class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5"
+                                      >
+                                      تاريخ فتح حساب	
+                                      </th>
+                                      <th
+                                        class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5"
+                                      >
+                                      الرصيد المتبقي	
+                                      </th>
+                                      <th
+                                      class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5"
+                                    >
+                                    قيمة القسط	                                   
+                                 </th>
+                                 <th
+                                 class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5"
+                               >
+                               قيمة المديونية		                                   
+                            </th>
+                            <th
+                            class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5"
+                          >
+                          فتره السداد	
+                                               </th>
+                                               <th
+                                               class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5"
+                                             >
+                                             مبلغ القرض	
+                                                                  </th>
+                                                                  <th
+                                                                  class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5"
+                                                                >
+                                                                إعادة الجدولة
+                                                            </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr class="border border-transparent border-b-slate-200 dark:border-b-navy-500">
+                                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">1</td>
+                                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">Cy Ganderton</td>
+                                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                                        Quality Control Specialist
+                                      </td>
+                                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">Blue</td>
+                                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">Blue</td>
+                                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">Blue</td>
+                                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">Blue</td>
+                                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">Blue</td>
+                                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">Blue</td>
+                                    </tr>
+                                    <tr class="border border-transparent border-b-slate-200 dark:border-b-navy-500">
+                                        <td class="whitespace-nowrap px-4 py-3 sm:px-5">1</td>
+                                        <td class="whitespace-nowrap px-4 py-3 sm:px-5">Cy Ganderton</td>
+                                        <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                                          Quality Control Specialist
+                                        </td>
+                                        <td class="whitespace-nowrap px-4 py-3 sm:px-5">Blue</td>
+                                        <td class="whitespace-nowrap px-4 py-3 sm:px-5">Blue</td>
+                                        <td class="whitespace-nowrap px-4 py-3 sm:px-5">Blue</td>
+                                        <td class="whitespace-nowrap px-4 py-3 sm:px-5">Blue</td>
+                                        <td class="whitespace-nowrap px-4 py-3 sm:px-5">Blue</td>
+                                        <td class="whitespace-nowrap px-4 py-3 sm:px-5">Blue</td>
+                                      </tr>
+                                
+                                  </tbody>
+                                </table>
+                              </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+    </div>
+    </div>
+
+    </div>
+
     </div>
     </div>
     </main>

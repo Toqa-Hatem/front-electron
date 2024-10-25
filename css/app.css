@@ -971,6 +971,9 @@ code.inline-code {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.form-select{
+  width: 11rem;
+}
 .form-input,
 .form-multiselect,
 .form-select,
@@ -1001,6 +1004,10 @@ code.inline-code {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+.logo-sign{
+  height: 5vh;
+}
+
 .form-input,
 .form-multiselect,
 .form-select,
@@ -1748,7 +1755,7 @@ code.inline-code {
   print-color-adjust: exact;
 }
 .btn {
-  width: auto;
+  width: 13rem;
   align-items: center;
   border-radius: 0.5rem;
   cursor: pointer;

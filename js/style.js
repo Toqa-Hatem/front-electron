@@ -1,3 +1,4 @@
+// for radio btns with inputs 
 function toggleInput(type) {
     const barcodeInput = document.getElementById('barcodeInput');
     const serialInput = document.getElementById('serialInput');
@@ -13,11 +14,39 @@ function toggleInput(type) {
         serialInput.classList.remove('hidden');
     }
 }
-
+// ------
 function data() {
     return {
         showModal: false,
         firstCheckbox: false,
         showAdditionalCheckboxes: false,
     };
+}
+
+function showContent(filePath) {
+  const contentDisplay = document.getElementById('contentDisplay');
+  contentDisplay.innerHTML = `<iframe src="${filePath}" width="100%" height="400px"></iframe>`;
+  document.getElementById('modal').classList.remove('hidden');
+  document.getElementById('printButton').style.display = 'block';
+}
+
+function showImage(imagePath) {
+  const contentDisplay = document.getElementById('contentDisplay');
+  contentDisplay.innerHTML = `<img src="${imagePath}" alt="Image" width="100%" />`;
+  document.getElementById('modal').classList.remove('hidden');
+  document.getElementById('printButton').style.display = 'none'; // Hide print button for images
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.add('hidden');
+}
+// for show files 
+function printContent() {
+  const content = document.getElementById('contentDisplay').innerHTML;
+  const printWindow = window.open('', '', 'height=600,width=1200');
+  printWindow.document.write('<html><head><title>Print</title></head><body>');
+  printWindow.document.write(content);
+  printWindow.document.write('</body></html>');
+  printWindow.document.close();
+  printWindow.print();
 }

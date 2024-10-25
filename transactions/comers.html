@@ -453,12 +453,24 @@
                 <div x-collapse x-show="expanded">
                   <ul class="flex flex-1 flex-col px-4 font-inter">
                     <li>
-                      <a x-data="navLink" href="../legal-affairs/legal-affairs.html"
+                      <a x-data="navLink" href="../products/available-products.html"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         المنتجات المتوفرة
                       </a>
                     </li>
+                    <li>
+                        <a x-data="navLink" href="../products/transfer-products.html"
+                          :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
+                          class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+نقل المنتجات                        </a>
+                      </li>
+                      <li>
+                        <a x-data="navLink" href="../products/recieve-products.html"
+                          :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
+                          class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+استلام المنتجات                        </a>
+                      </li>
 
                   </ul>
                 </div>

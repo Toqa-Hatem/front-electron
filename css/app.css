@@ -628,9 +628,9 @@ nav.header .header-container {
 @supports (
   (-webkit-backdrop-filter: var(--tw)) or (backdrop-filter: var(--tw))
 ) {
-  .is-header-blur nav.header .header-container {
+  /* .is-header-blur nav.header .header-container {
     background-color: hsla(0, 0%, 100%, 0.8);
-  }
+  } */
   .dark .is-header-blur nav.header .header-container {
     background-color: rgba(34, 46, 69, 0.8) !important;
   }
@@ -1748,6 +1748,7 @@ code.inline-code {
   print-color-adjust: exact;
 }
 .btn {
+  width:14rem;
   align-items: center;
   border-radius: 0.5rem;
   cursor: pointer;

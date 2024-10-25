@@ -1748,7 +1748,7 @@ code.inline-code {
   print-color-adjust: exact;
 }
 .btn {
-  width:14rem;
+  width: auto;
   align-items: center;
   border-radius: 0.5rem;
   cursor: pointer;

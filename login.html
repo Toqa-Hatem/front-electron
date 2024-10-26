@@ -1,61 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
-  <head>
-    <!-- Meta tags  -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
 
-    <title>Lineone - Sign In v2</title>
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+<head>
+  <!-- Meta tags  -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 
-    <!-- CSS Assets -->
-    <link rel="stylesheet" href="css/app.css" />
+  <title>Lineone - Sign In v2</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <!-- CSS Assets -->
+  <link rel="stylesheet" href="css/app.css" />
 
 
-    <!-- Javascript Assets -->
-    <script src="js/app.js" defer></script>
+  <!-- Javascript Assets -->
+  <script src="js/app.js" defer></script>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <script>
-      /**
-       * THIS SCRIPT REQUIRED FOR PREVENT FLICKERING IN SOME BROWSERS
-       */
-      localStorage.getItem("_x_darkMode_on") === "true" &&
-        document.documentElement.classList.add("dark");
-    </script>
-  </head>
-  <body x-data class="is-header-blur" x-bind="$store.global.documentBody">
-    <!-- App preloader-->
-    <div
-      class="app-preloader fixed z-50 grid h-full w-full place-content-center bg-slate-50 dark:bg-navy-900"
-    >
-      <div class="app-preloader-inner relative inline-block h-48 w-48"></div>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+  <script>
+    /**
+     * THIS SCRIPT REQUIRED FOR PREVENT FLICKERING IN SOME BROWSERS
+     */
+    localStorage.getItem("_x_darkMode_on") === "true" &&
+      document.documentElement.classList.add("dark");
+  </script>
+</head>
+
+<body x-data class="is-header-blur" x-bind="$store.global.documentBody">
+  <!-- App preloader-->
+  <div class="app-preloader fixed z-50 grid h-full w-full place-content-center bg-slate-50 dark:bg-navy-900">
+    <div class="app-preloader-inner relative inline-block h-48 w-48"></div>
+  </div>
+
+  <!-- Page Wrapper -->
+  <div id="root" class="min-h-100vh flex grow bg-slate-50 dark:bg-navy-900" x-cloak>
+    <div class="fixed top-0 hidden p-6 lg:block lg:px-12">
+      <a href="#" class="flex items-center space-x-2 space-x-reverse">
+        <!-- <img class="h-full w-full logo-sign" src="./images/logo.jpg" alt="logo"  /> -->
+
+      </a>
     </div>
-
-    <!-- Page Wrapper -->
-    <div
-      id="root"
-      class="min-h-100vh flex grow bg-slate-50 dark:bg-navy-900"
-      x-cloak
-    >
-      <div class="fixed top-0 hidden p-6 lg:block lg:px-12">
-        <a href="#" class="flex items-center space-x-2 space-x-reverse">
-          <!-- <img class="h-full w-full logo-sign" src="./images/logo.jpg" alt="logo"  /> -->
-         
-        </a>
-      </div>
-      <!-- <div class="hidden w-half place-items-center lg:grid">
+    <!-- <div class="hidden w-half place-items-center lg:grid">
         <div class="w-full max-w-lg p-6">
           <img
             class="w-full"
@@ -66,76 +58,58 @@
           
         </div>
       </div> -->
-      <main
-        class="flex w-full flex-col items-center bg-white dark:bg-navy-700"
-      >
-        <div class="flex w-full max-w-lg grow flex-col justify-center p-5">
-          <div class="text-center">
-          
-            <div class="mt-4">
-              <img
-              class="w-full"
-              x-show="!$store.global.isDarkModeEnabled"
-              src="./images/logo.jpg"
-              alt="image"
-            />
-              <h2
-                class="text-2xl font-semibold text-slate-600 dark:text-navy-100"
-              >
-مرحبا بك في الكترون              </h2>
-              <p class="text-slate-400 dark:text-navy-300">
-من فضلك قم بتسجيل الدخول              </p>
-            </div>
-          </div>
-          <div class="mt-16">
-            <label class="relative flex">
-              <input
-                class="form-input peer w-full rounded-lg bg-slate-150 px-3 py-2 pr-9 ring-primary/50 placeholder:text-slate-400 hover:bg-slate-200 focus:ring dark:bg-navy-900/90 dark:ring-accent/50 dark:placeholder:text-navy-300 dark:hover:bg-navy-900 dark:focus:bg-navy-900"
-                placeholder="اسم المستخدم"
-                type="text"
-              />
-             
-            </label>
-            <label class="relative mt-4 flex">
-              <input
-                class="form-input peer w-full rounded-lg bg-slate-150 px-3 py-2 pr-9 ring-primary/50 placeholder:text-slate-400 hover:bg-slate-200 focus:ring dark:bg-navy-900/90 dark:ring-accent/50 dark:placeholder:text-navy-300 dark:hover:bg-navy-900 dark:focus:bg-navy-900"
-                placeholder="الرقم السري"
-                type="password"
-              />
-           
-            </label>
-            <div
-              class="mt-4 flex items-center justify-between space-x-2 space-x-reverse"
-            >
-              <label class="inline-flex items-center space-x-2 space-x-reverse">
-                <input
-                  class="form-checkbox is-outline h-5 w-5 rounded border-slate-400/70 bg-slate-100 before:bg-primary checked:border-primary hover:border-primary focus:border-primary dark:border-navy-500 dark:bg-navy-900 dark:before:bg-accent dark:checked:border-accent dark:hover:border-accent dark:focus:border-accent"
-                  type="checkbox"
-                />
-                <span class="line-clamp-1">تذكرني </span>
-              </label>
-              <a
-                href="#"
-                class="text-xs text-slate-400 transition-colors line-clamp-1 hover:text-slate-800 focus:text-slate-800 dark:text-navy-300 dark:hover:text-navy-100 dark:focus:text-navy-100"
-                >نسيت كلمة السر ؟ 
-                </a
-              >
-            </div>
-            <button
-              class="btn mt-10 h-10 w-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
-            >
-تسجيل الدخول            </button>
-           
-      </main>
-    </div>
+    <main class="flex w-full flex-col items-center bg-white dark:bg-navy-700">
+      <div class="flex w-full max-w-lg grow flex-col justify-center p-5">
+        <div class="text-center">
 
-    <!-- 
+          <div class="mt-4">
+            <img class="w-full" x-show="!$store.global.isDarkModeEnabled" src="./images/logo.jpg" alt="image" />
+            <h2 class="text-2xl font-semibold text-slate-600 dark:text-navy-100">
+              مرحبا بك في الكترون </h2>
+            <p class="text-slate-400 dark:text-navy-300">
+              من فضلك قم بتسجيل الدخول </p>
+          </div>
+        </div>
+        <div class="mt-16">
+          <label class="relative flex">
+            <input
+              class="form-input peer w-full rounded-lg bg-slate-150 px-3 py-2 pr-9 ring-primary/50 placeholder:text-slate-400 hover:bg-slate-200 focus:ring dark:bg-navy-900/90 dark:ring-accent/50 dark:placeholder:text-navy-300 dark:hover:bg-navy-900 dark:focus:bg-navy-900"
+              placeholder="اسم المستخدم" type="text" />
+
+          </label>
+          <label class="relative mt-4 flex">
+            <input
+              class="form-input peer w-full rounded-lg bg-slate-150 px-3 py-2 pr-9 ring-primary/50 placeholder:text-slate-400 hover:bg-slate-200 focus:ring dark:bg-navy-900/90 dark:ring-accent/50 dark:placeholder:text-navy-300 dark:hover:bg-navy-900 dark:focus:bg-navy-900"
+              placeholder="الرقم السري" type="password" />
+
+          </label>
+          <div class="mt-4 flex items-center justify-between space-x-2 space-x-reverse">
+            <label class="inline-flex items-center space-x-2 space-x-reverse">
+              <input
+                class="form-checkbox is-outline h-5 w-5 rounded border-slate-400/70 bg-slate-100 before:bg-primary checked:border-primary hover:border-primary focus:border-primary dark:border-navy-500 dark:bg-navy-900 dark:before:bg-accent dark:checked:border-accent dark:hover:border-accent dark:focus:border-accent"
+                type="checkbox" />
+              <span class="line-clamp-1">تذكرني </span>
+            </label>
+            <a href="#"
+              class="text-xs text-slate-400 transition-colors line-clamp-1 hover:text-slate-800 focus:text-slate-800 dark:text-navy-300 dark:hover:text-navy-100 dark:focus:text-navy-100">نسيت
+              كلمة السر ؟
+            </a>
+          </div>
+          <button
+            class="btn mt-10 h-10 w-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
+            تسجيل الدخول </button>
+
+    </main>
+  </div>
+
+  <!-- 
         This is a place for Alpine.js Teleport feature 
         @see https://alpinejs.dev/directives/teleport
       -->
-    <div id="x-teleport-target"></div>
-    <script>
-      window.addEventListener("DOMContentLoaded", () => Alpine.start());
-    </script>
-  </body>
+  <div id="x-teleport-target"></div>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => Alpine.start());
+  </script>
+</body>
+
 </html>

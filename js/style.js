@@ -1,26 +1,56 @@
 // for radio btns with inputs 
 function toggleInput(type) {
-    const barcodeInput = document.getElementById('barcodeInput');
-    const serialInput = document.getElementById('serialInput');
-    
-    // Hide both inputs initially
-    barcodeInput.classList.add('hidden');
-    serialInput.classList.add('hidden');
-    
-    // Show the selected input based on the radio button
-    if (type === 'barcode') {
-        barcodeInput.classList.remove('hidden');
-    } else if (type === 'serial') {
-        serialInput.classList.remove('hidden');
-    }
+  const barcodeInput = document.getElementById('barcodeInput');
+  const serialInput = document.getElementById('serialInput');
+  const again = document.getElementById('again');
+  const telling = document.getElementById('telling');
+
+  // Hide both inputs initially
+  barcodeInput.classList.add('hidden');
+  serialInput.classList.add('hidden');
+  again.classList.add('hidden');
+  telling.classList.add('hidden');
+
+  // Show the selected input based on the radio button
+  if (type === 'barcode') {
+    barcodeInput.classList.remove('hidden');
+
+  } else if (type === 'serial') {
+    serialInput.classList.remove('hidden');
+  }
+
+  if (type === 'again') {
+    again.classList.remove('hidden');
+
+  } else if (type === 'telling') {
+    telling.classList.remove('hidden');
+  }
+
+}
+function toggle(type) {
+  const again = document.getElementById('again');
+  const telling = document.getElementById('telling');
+
+  // Hide both inputs initially
+  again.classList.add('hidden');
+  telling.classList.add('hidden');
+
+  // Show the selected input based on the radio button
+  if (type === 'again') {
+    again.classList.remove('hidden');
+
+  } else if (type === 'telling') {
+    telling.classList.remove('hidden');
+  }
+
 }
 // ------
 function data() {
-    return {
-        showModal: false,
-        firstCheckbox: false,
-        showAdditionalCheckboxes: false,
-    };
+  return {
+    showModal: false,
+    firstCheckbox: false,
+    showAdditionalCheckboxes: false,
+  };
 }
 
 function showContent(filePath) {

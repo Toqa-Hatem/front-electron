@@ -51,8 +51,7 @@
           <!-- Application Logo -->
           <div class="flex pt-4">
             <a href="/">
-              <img class="h-28 transition-transform duration-500 ease-in-out"
-                src="../images/logo.jpg" alt="logo" />
+              <img class="h-20 transition-transform duration-500 ease-in-out" src="../images/logo.jpg" alt="logo" />
             </a>
           </div>
 
@@ -61,7 +60,7 @@
             <div x-data="{expandedItem:null}" class="mt-5 flex flex-col">
               <div>
                 <a href="index.html"
-                class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out"
+                  class="flex h-11 p-2 items-center rounded-lg bg-primary/10 text-primary outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-navy-600 dark:text-accent-light dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
                   x-tooltip.placement.right="'الرئيسية '">
                   <svg class="h-7 w-7 ml-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <path fill="currentColor" fill-opacity=".3"
@@ -163,13 +162,6 @@
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         البنوك
-                      </a>
-                    </li>
-                    <li>
-                      <a x-data="navLink" href="../settings/permission.html"
-                        :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
-                        class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
-                        الصلاحيات
                       </a>
                     </li>
 
@@ -408,14 +400,14 @@
                 <div x-collapse x-show="expanded">
                   <ul class="flex flex-1 flex-col px-4 font-inter">
                     <li>
-                      <a x-data="navLink" href="../legal-affairs/legal-affairs.html"
+                      <a x-data="navLink" href="#"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         عملاء الأقساط
                       </a>
                     </li>
                     <li>
-                      <a x-data="navLink" href="../settings/nationalities.html"
+                      <a x-data="navLink" href="#"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         العملاء المتأخرون
@@ -453,24 +445,12 @@
                 <div x-collapse x-show="expanded">
                   <ul class="flex flex-1 flex-col px-4 font-inter">
                     <li>
-                      <a x-data="navLink" href="../products/available-products.html"
+                      <a x-data="navLink" href="#"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         المنتجات المتوفرة
                       </a>
                     </li>
-                    <li>
-                        <a x-data="navLink" href="../products/transfer-products.html"
-                          :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
-                          class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
-نقل المنتجات                        </a>
-                      </li>
-                      <li>
-                        <a x-data="navLink" href="../products/recieve-products.html"
-                          :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
-                          class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
-استلام المنتجات                        </a>
-                      </li>
 
                   </ul>
                 </div>
@@ -501,14 +481,14 @@
                 <div x-collapse x-show="expanded">
                   <ul class="flex flex-1 flex-col px-4 font-inter">
                     <li>
-                      <a x-data="navLink" href="../legal-affairs/legal-affairs.html"
+                      <a x-data="navLink" href="#"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         توريد جديد
                       </a>
                     </li>
                     <li>
-                      <a x-data="navLink" href="../legal-affairs/legal-affairs.html"
+                      <a x-data="navLink" href="#"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         المنتجات
@@ -548,7 +528,7 @@
                 <div x-collapse x-show="expanded">
                   <ul class="flex flex-1 flex-col px-4 font-inter">
                     <li>
-                      <a x-data="navLink" href="../legal-affairs/legal-affairs.html"
+                      <a x-data="navLink" href="#"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         إستلام البضاعة </a>
@@ -588,46 +568,46 @@
                 <div x-collapse x-show="expanded">
                   <ul class="flex flex-1 flex-col px-4 font-inter">
                     <li>
-                      <a x-data="navLink" href="../legal-affairs/legal-affairs.html"
+                      <a x-data="navLink" href="#"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         العملاء
                       </a>
                     </li>
                     <li>
-                      <a x-data="navLink" href="../legal-affairs/legal-affairs.html"
+                      <a x-data="navLink" href="#"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         المستخدمين </a>
                     </li>
                     <li>
-                      <a x-data="navLink" href="../legal-affairs/legal-affairs.html"
+                      <a x-data="navLink" href="#"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         الاعضاء </a>
                     </li>
                     <li>
-                      <a x-data="navLink" href="../legal-affairs/legal-affairs.html"
+                      <a x-data="navLink" href="#"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         الوسطاء </a>
                     </li>
                     <li>
-                      <a x-data="navLink" href="../legal-affairs/legal-affairs.html"
+                      <a x-data="navLink" href="#"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         منجزين المعاملات
                       </a>
                     </li>
                     <li>
-                      <a x-data="navLink" href="../legal-affairs/legal-affairs.html"
+                      <a x-data="navLink" href="#"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         طرق التواصل
                       </a>
                     </li>
                     <li>
-                      <a x-data="navLink" href="../legal-affairs/legal-affairs.html"
+                      <a x-data="navLink" href="#"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         مجموعات العمل (الوظيفة) </a>
@@ -708,7 +688,6 @@
         </div>
       </div>
     </div>
-
     <!-- App Header Wrapper-->
     <nav class="header print:hidden">
       <!-- App Header  -->

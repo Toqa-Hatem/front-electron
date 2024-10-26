@@ -9,6 +9,12 @@
 :before {
   --tw-content: "";
 }
+a{
+  cursor: pointer;
+}
+td{
+ padding-right: 20px;
+}
 html {
   -webkit-text-size-adjust: 100%;
   font-feature-settings: normal;

@@ -662,9 +662,9 @@ nav.header .header-container {
   }
 }
 @media (min-width: 768px) {
-  /* .main-content {
+  .main-content {
     margin-right: var(--main-sidebar-width);
-  } */
+  }
   .has-min-sidebar .main-content {
     margin-right: calc(
       var(--main-sidebar-width) + var(--sidebar-panel-min-width)

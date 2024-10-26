@@ -977,9 +977,7 @@ code.inline-code {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-select{
-  width: 11rem;
-}
+
 .form-input,
 .form-multiselect,
 .form-select,

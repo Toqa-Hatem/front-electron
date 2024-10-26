@@ -57,7 +57,8 @@
 
           <!-- Main Sections Links -->
           <div class="is-scrollbar-hidden flex w-full grow flex-col space-y-4 overflow-y-auto pt-6 px-4">
-            <div x-data="{expandedItem:null}" class="mt-5 flex flex-col">
+
+            <div class="mt-5 flex flex-col space-y-2 rounded-lg">
               <div>
                 <a href="index.html"
                   class="flex h-11 p-2 items-center rounded-lg bg-primary/10 text-primary outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-navy-600 dark:text-accent-light dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
@@ -74,7 +75,7 @@
                   الرئيسية
                 </a>
               </div>
-              <div x-data="accordionItem('item-1')" class="pt-3">
+              <div x-data="{expanded:false}" class="rounded-lg dark:border-navy-500">
                 <div @click="expanded = !expanded"
                   class="flex h-11 p-2 items-center justify-between rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                   x-tooltip.placement.right="'الإعدادات'">
@@ -168,7 +169,7 @@
                   </ul>
                 </div>
               </div>
-              <div x-data="accordionItem('item-2')" class="pt-3">
+              <div x-data="{expanded:false}" class="rounded-lg dark:border-navy-500">
                 <div @click="expanded = !expanded"
                   class="flex h-11 p-2 items-center justify-between rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                   x-tooltip.placement.right="'المعاملات المقدمة'">
@@ -227,7 +228,7 @@
                   </ul>
                 </div>
               </div>
-              <div x-data="accordionItem('item-3')" class="pt-3">
+              <div x-data="{expanded:false}" class="rounded-lg dark:border-navy-500">
                 <div @click="expanded = !expanded"
                   class="flex h-11 p-2 items-center justify-between rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                   x-tooltip.placement.right="'الشئون القانونية'">
@@ -369,7 +370,7 @@
                   </ul>
                 </div>
               </div>
-              <div x-data="accordionItem('item-4')" class="pt-3">
+              <!-- <div x-data="{expanded:false}" class="rounded-lg dark:border-navy-500">
                 <div @click="expanded = !expanded"
                   class="flex h-11 p-2 items-center justify-between rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                   x-tooltip.placement.right="'عملاء الأقساط'">
@@ -416,8 +417,8 @@
 
                   </ul>
                 </div>
-              </div>
-              <div x-data="accordionItem('item-5')" class="pt-3">
+              </div> -->
+              <div x-data="{expanded:false}" class="rounded-lg dark:border-navy-500">
                 <div @click="expanded = !expanded"
                   class="flex h-11 p-2 items-center justify-between rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                   x-tooltip.placement.right="'المنتجات'">
@@ -445,7 +446,7 @@
                 <div x-collapse x-show="expanded">
                   <ul class="flex flex-1 flex-col px-4 font-inter">
                     <li>
-                      <a x-data="navLink" href="#"
+                      <a x-data="navLink" href="../products/available-products.html"
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         المنتجات المتوفرة
@@ -455,7 +456,7 @@
                   </ul>
                 </div>
               </div>
-              <div x-data="accordionItem('item-6')" class="pt-3">
+              <!-- <div x-data="{expanded:false}" class="rounded-lg dark:border-navy-500">
                 <div @click="expanded = !expanded"
                   class="flex h-11 p-2 items-center justify-between rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                   x-tooltip.placement.right="'الشركات الموردة'">
@@ -496,11 +497,11 @@
                     </li>
                   </ul>
                 </div>
-              </div>
-              <div x-data="accordionItem('item-7')" class="pt-3">
+              </div> -->
+              <!-- <div x-data="{expanded:false}" class="rounded-lg dark:border-navy-500">
                 <div @click="expanded = !expanded"
                   class="flex h-11 p-2 items-center justify-between rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
-                  x-tooltip.placement.right="'الشركات الموردة'">
+                  x-tooltip.placement.right="' مخزن المعرض '">
                   <div class="flex items-center">
                     <svg class="h-7 w-7 ml-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
@@ -536,8 +537,8 @@
 
                   </ul>
                 </div>
-              </div>
-              <div x-data="accordionItem('item-8')" class="pt-3">
+              </div> -->
+              <!-- <div x-data="{expanded:false}" class="rounded-lg dark:border-navy-500">
                 <div @click="expanded = !expanded"
                   class="flex h-11 p-2 items-center justify-between rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                   x-tooltip.placement.right="'الموارد البشرية'">
@@ -563,58 +564,57 @@
                     class="text-sm font-normal leading-none text-slate-400 transition-transform duration-300 dark:text-navy-300">
                     <i class="fas fa-chevron-down"></i>
                   </div>
-
                 </div>
                 <div x-collapse x-show="expanded">
                   <ul class="flex flex-1 flex-col px-4 font-inter">
                     <li>
-                      <a x-data="navLink" href="#"
+                      <a x-data="navLink" href=""
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         العملاء
                       </a>
                     </li>
                     <li>
-                      <a x-data="navLink" href="#"
+                      <a x-data="navLink" href=""
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         المستخدمين </a>
                     </li>
                     <li>
-                      <a x-data="navLink" href="#"
+                      <a x-data="navLink" href=""
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         الاعضاء </a>
                     </li>
                     <li>
-                      <a x-data="navLink" href="#"
+                      <a x-data="navLink" href=""
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         الوسطاء </a>
                     </li>
                     <li>
-                      <a x-data="navLink" href="#"
+                      <a x-data="navLink" href=""
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         منجزين المعاملات
                       </a>
                     </li>
                     <li>
-                      <a x-data="navLink" href="#"
+                      <a x-data="navLink" href=""
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         طرق التواصل
                       </a>
                     </li>
                     <li>
-                      <a x-data="navLink" href="#"
+                      <a x-data="navLink" href=""
                         :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50'"
                         class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
                         مجموعات العمل (الوظيفة) </a>
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 

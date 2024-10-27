@@ -18,6 +18,7 @@
 
   <!-- Javascript Assets -->
   <script src="../js/app.js" defer></script>
+  <script src="../js/style.js" defer></script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -696,7 +697,7 @@
         <!-- Header Items -->
         <div class="flex w-full items-center justify-between">
           <!-- Left: Sidebar Toggle Button -->
-         
+
 
           <!-- Right: Header buttons -->
           <div class="-ml-1.5 flex items-center space-x-2 space-x-reverse">
@@ -1448,7 +1449,7 @@
       <div class=" filters ">
         <button
           class="btn border border-info font-medium text-info hover:bg-info hover:text-white focus:bg-info focus:text-white active:bg-info/90 ml-3 mt-3">
-           عدد المنتجات (5857)
+          عدد المنتجات (5857)
         </button>
         <button
           class="btn border border-secondary font-medium text-secondary hover:bg-secondary hover:text-white focus:bg-secondary focus:text-white active:bg-secondary/90 dark:text-secondary-light dark:hover:bg-secondary dark:hover:text-white dark:focus:bg-secondary dark:focus:text-white dark:active:bg-secondary/90 ml-3 mt-3">
@@ -1456,32 +1457,31 @@
         </button>
         <button
           class="btn border border-slate-300 font-medium text-slate-800 hover:bg-slate-150 focus:bg-slate-150 active:bg-slate-150/80 dark:border-navy-450 dark:text-navy-50 dark:hover:bg-navy-500 dark:focus:bg-navy-500 dark:active:bg-navy-500/90 ml-3 mt-3">
-           اجمالي سعر البيع (6637)
+          اجمالي سعر البيع (6637)
         </button>
-      
+
       </div>
       <div class=" card-custom my-5 flex items-center justify-between">
         <div class="flex ">
-        
-          <a class="btn bg-primary font-medium ml-2 text-white hover:bg-success-focus focus:bg-success-focus active:bg-success-focus/90"
-            >
+
+          <a
+            class="btn bg-primary font-medium ml-2 text-white hover:bg-success-focus focus:bg-success-focus active:bg-success-focus/90">
             طباعة
           </a>
           <div x-data="{showModal:false}">
             <button @click="showModal = true"
               class="btn bg-slate-150 font-medium text-slate-800 hover:bg-slate-200 focus:bg-slate-200 active:bg-slate-200/80 dark:bg-navy-500 dark:text-navy-50 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90">
-              اضافة جديد 
+              اضافة جديد
             </button>
 
             <template x-teleport="#x-teleport-target">
               <div
                 class="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden px-4 py-6 sm:px-5"
                 x-show="showModal" role="dialog" @keydown.window.escape="showModal = false">
-                <div class="absolute inset-0 bg-slate-900/60 transition-opacity duration-300"
-                  @click="showModal = false" x-show="showModal" x-transition:enter="ease-out"
-                  x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-                  x-transition:leave="ease-in" x-transition:leave-start="opacity-100"
-                  x-transition:leave-end="opacity-0"></div>
+                <div class="absolute inset-0 bg-slate-900/60 transition-opacity duration-300" @click="showModal = false"
+                  x-show="showModal" x-transition:enter="ease-out" x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100" x-transition:leave="ease-in"
+                  x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"></div>
                 <div
                   class="relative w-full max-w-lg origin-top rounded-lg bg-white transition-all duration-300 dark:bg-navy-700"
                   x-show="showModal" x-transition:enter="easy-out" x-transition:enter-start="opacity-0 scale-95"
@@ -1489,7 +1489,7 @@
                   x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95">
                   <div class="flex justify-between rounded-t-lg bg-slate-200 px-4 py-3 dark:bg-navy-800 sm:px-5">
                     <h3 class="text-base font-medium text-slate-700 dark:text-navy-100">
-اضافة جديد                    </h3>
+                      اضافة جديد </h3>
                     <button @click="showModal = !showModal"
                       class="btn -ml-1.5 h-7 w-7 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24"
@@ -1500,35 +1500,32 @@
                   </div>
                   <div class="px-4 py-4 sm:px-5">
                     <div class="mt-4 space-y-4">
-                        <label class="block">
-                            <span>الشركة الموردة</span>
-                            <select
-                              class="form-select mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent"
-                            >
-                              <option>الشركة </option>
-                              <option>الشركة </option>
+                      <label class="block">
+                        <span>الشركة الموردة</span>
+                        <select
+                          class="form-select mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent">
+                          <option>الشركة </option>
+                          <option>الشركة </option>
 
-                            </select>
-                          </label>
-                          <label class="block">
-                            <span>الماركة</span>
-                            <select
-                              class="form-select mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent"
-                            >
-                              <option>الماركة </option>
-                              <option>الماركة </option>
-                            </select>
-                          </label>
-                          <label class="block">
-                            <span>الصنف</span>
-                            <select
-                              class="form-select mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent"
-                            >
-                              <option>الصنف</option>
-                              <option>الصنف</option>
-                            </select>
-                          </label> 
-                           <label class="block">
+                        </select>
+                      </label>
+                      <label class="block">
+                        <span>الماركة</span>
+                        <select
+                          class="form-select mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent">
+                          <option>الماركة </option>
+                          <option>الماركة </option>
+                        </select>
+                      </label>
+                      <label class="block">
+                        <span>الصنف</span>
+                        <select
+                          class="form-select mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent">
+                          <option>الصنف</option>
+                          <option>الصنف</option>
+                        </select>
+                      </label>
+                      <label class="block">
                         الموديل
                         <input
                           class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
@@ -1546,30 +1543,41 @@
                           class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                           placeholder=" صافي التكلفة" type="text" />
                       </label>
-                    
+
                       <div>
-                      <div class="flex">
-                        <h3 class="mx-1">السيريال</h3>
-                        <label class="inline-flex items-center  space-x-reverse space-x-2 mx-1 ">
-                            <input
-                              checked
-                              class="form-radio is-basic h-5 w-5 rounded-full border-slate-400/70 checked:border-slate-500 checked:bg-slate-500 hover:border-slate-500 focus:border-slate-500 dark:border-navy-400 dark:checked:bg-navy-400"
-                              name="basic"
-                              type="radio"
-                            />
-                            <p>يوجد</p>
+                        <div class="flex justify-around mt-3">
+                          <label class="block mx-1 mt-3">
+                            <input type="radio" name="inputType" value="barcode" onclick="toggleInput('barcode')" />
+                            الباركود
                           </label>
-                          <label class="inline-flex items-center  space-x-reverse space-x-2 mx-1">
-                            <input
-                              class="form-radio is-basic h-5 w-5 rounded-full border-slate-400/70 checked:border-primary checked:bg-primary hover:border-primary focus:border-primary dark:border-navy-400 dark:checked:border-accent dark:checked:bg-accent dark:hover:border-accent dark:focus:border-accent"
-                              name="basic"
-                              type="radio"
-                            />
-                            <p>لا يوجد</p>
+                          <label class="block mt-3  mx-1">
+                            <input type="radio" name="inputType" value="serial" onclick="toggleInput('serial')" />
+                            السريال نمبر
                           </label>
+                          <button
+                            class="btn mx-1 mt-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
+                            اضافة </button>
+                        </div>
+                
+                        <div id="barcodeInput" class="hidden ">
+                          <label class="block w-full mx-1">
+                            الباركود
+                            <input
+                              class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary"
+                              placeholder="الباركود" type="text" />
+                          </label>
+                        </div>
+                
+                        <div id="serialInput" class="hidden ">
+                          <label class="block w-full mx-1">
+                            السريال نمبر
+                            <input
+                              class="form-input w-full rounded-lg border border-slate-300 my-2 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary"
+                              placeholder="السريال نمبر" type="text" />
+                          </label>
+                        </div>
                       </div>
-                      </div>
-                      <div class=" space-x-reverse space-x-2 text-right">
+                      <div class="space-x-reverse space-x-2 text-right">
                         <button @click="showModal = false"
                           class="btn min-w-[7rem] rounded-full border border-slate-300 font-medium text-slate-800 hover:bg-slate-150 focus:bg-slate-150 active:bg-slate-150/80 dark:border-navy-450 dark:text-navy-50 dark:hover:bg-navy-500 dark:focus:bg-navy-500 dark:active:bg-navy-500/90">
                           إلغاء
@@ -1618,7 +1626,7 @@
                 </th>
                 <th
                   class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
-                  الماركة 
+                  الماركة
                 </th>
                 <th
                   class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
@@ -1635,7 +1643,7 @@
 
                 <th
                   class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
-                   الكلي
+                  الكلي
                 </th>
                 <th
                   class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
@@ -1647,7 +1655,7 @@
                 </th>
                 <th
                   class="whitespace-nowrap bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
-سعر البيع                </th>
+                  سعر البيع </th>
                 <th
                   class="whitespace-nowrap rounded-tl-lg bg-slate-200 px-4 py-3 font-semibold uppercase text-slate-800 dark:bg-navy-800 dark:text-navy-100 lg:px-5">
                   عمليات </th>
@@ -1674,132 +1682,123 @@
                   <h5>33</h5>
                 </td>
                 <td class="whitespace-nowrap  py-3 sm:px-5">
-                    <h5>33</h5>
+                  <h5>33</h5>
 
                 </td>
                 <td class="whitespace-nowrap  py-3 sm:px-5">
-                    <h5>33</h5>
+                  <h5>33</h5>
 
                 </td>
                 <td class="whitespace-nowrap px-2 py-3 sm:px-5">
-                    <h5>33</h5>
+                  <h5>33</h5>
                 </td>
                 <td class="whitespace-nowrap px-2 py-3 sm:px-5">
-               
+
                   <a>
 
                     <div x-data="{showModal:false}">
-                        <button @click="showModal = true">
+                      <button @click="showModal = true">
                         <i class="fa-solid fa-pen-to-square text-info"></i>
-                        </button>
-          
-                        <template x-teleport="#x-teleport-target">
+                      </button>
+
+                      <template x-teleport="#x-teleport-target">
+                        <div
+                          class="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden px-4 py-6 sm:px-5"
+                          x-show="showModal" role="dialog" @keydown.window.escape="showModal = false">
+                          <div class="absolute inset-0 bg-slate-900/60 transition-opacity duration-300"
+                            @click="showModal = false" x-show="showModal" x-transition:enter="ease-out"
+                            x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                            x-transition:leave="ease-in" x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0"></div>
                           <div
-                            class="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden px-4 py-6 sm:px-5"
-                            x-show="showModal" role="dialog" @keydown.window.escape="showModal = false">
-                            <div class="absolute inset-0 bg-slate-900/60 transition-opacity duration-300"
-                              @click="showModal = false" x-show="showModal" x-transition:enter="ease-out"
-                              x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-                              x-transition:leave="ease-in" x-transition:leave-start="opacity-100"
-                              x-transition:leave-end="opacity-0"></div>
+                            class="relative w-full max-w-lg origin-top rounded-lg bg-white transition-all duration-300 dark:bg-navy-700"
+                            x-show="showModal" x-transition:enter="easy-out"
+                            x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="easy-in" x-transition:leave-start="opacity-100 scale-100"
+                            x-transition:leave-end="opacity-0 scale-95">
                             <div
-                              class="relative w-full max-w-lg origin-top rounded-lg bg-white transition-all duration-300 dark:bg-navy-700"
-                              x-show="showModal" x-transition:enter="easy-out" x-transition:enter-start="opacity-0 scale-95"
-                              x-transition:enter-end="opacity-100 scale-100" x-transition:leave="easy-in"
-                              x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95">
-                              <div class="flex justify-between rounded-t-lg bg-slate-200 px-4 py-3 dark:bg-navy-800 sm:px-5">
-                                <h3 class="text-base font-medium text-slate-700 dark:text-navy-100">
-                                 تعديل
-                                </h3>
-                                <button @click="showModal = !showModal"
-                                  class="btn -ml-1.5 h-7 w-7 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
-                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                                  </svg>
-                                </button>
-                              </div>
-                              <div class="px-4 py-4 sm:px-5">
-                                <div class="mt-4 space-y-4">
-                                    <label class="block w-full">
-                                        <span>الشركة الموردة </span>
-                                        <select
-                                          class="form-select mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent"
-                                        >
-                                          <option>الشركة </option>
-                                          <option>الشركة</option>
-                                          <option>الشركة</option>
-                                        </select>
-                                      </label>
-                                      <label class="block">
-                                        <span> الماركة </span>
-                                        <select
-                                          class="form-select mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent"
-                                        >
-                                          <option>الماركة </option>
-                                          <option>الماركة</option>
-                                          <option>الماركة</option>
-                                        </select>
-                                      </label>
-                                      <label class="block">
-                                        <span> الصنف </span>
-                                        <select
-                                          class="form-select mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent"
-                                        >
-                                          <option>الصنف </option>
-                                          <option>الصنف</option>
-                                          <option>الصنف</option>
-                                        </select>
-                                      </label>
-                                      <label class="block">
-                                     الموديل
-                                        <input
-                                          class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                          placeholder="الموديل"
-                                          type="text"
-                                        />
-                                      </label>
-                                      <label class="block">
-                                        السعر
-                                        <input
-                                          class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                          placeholder="السعر"
-                                          type="text"
-                                        />
-                                      </label>
-                                      <label class="block">
-                                        السيريال
-                                        <input
-                                          class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                          placeholder="السيريال"
-                                          type="text"
-                                        />
-                                      </label>
-                                      <label class="block">
-                                        صافي التكلفة
-                                        <input
-                                          class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
-                                          placeholder="صافس التكلفة"
-                                          type="text"
-                                        />
-                                      </label>
-                                  <div class=" space-x-reverse space-x-2 text-right">
-                                    <button @click="showModal = false"
-                                      class="btn min-w-[7rem] rounded-full border border-slate-300 font-medium text-slate-800 hover:bg-slate-150 focus:bg-slate-150 active:bg-slate-150/80 dark:border-navy-450 dark:text-navy-50 dark:hover:bg-navy-500 dark:focus:bg-navy-500 dark:active:bg-navy-500/90">
-                                      إلغاء
-                                    </button>
-                                    <button @click="showModal = false"
-                                      class="btn min-w-[7rem] rounded-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
-                                      تعديل
-                                    </button>
-                                  </div>
+                              class="flex justify-between rounded-t-lg bg-slate-200 px-4 py-3 dark:bg-navy-800 sm:px-5">
+                              <h3 class="text-base font-medium text-slate-700 dark:text-navy-100">
+                                تعديل
+                              </h3>
+                              <button @click="showModal = !showModal"
+                                class="btn -ml-1.5 h-7 w-7 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5" fill="none"
+                                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="px-4 py-4 sm:px-5">
+                              <div class="mt-4 space-y-4">
+                                <label class="block w-full">
+                                  <span>الشركة الموردة </span>
+                                  <select
+                                    class="form-select mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent">
+                                    <option>الشركة </option>
+                                    <option>الشركة</option>
+                                    <option>الشركة</option>
+                                  </select>
+                                </label>
+                                <label class="block">
+                                  <span> الماركة </span>
+                                  <select
+                                    class="form-select mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent">
+                                    <option>الماركة </option>
+                                    <option>الماركة</option>
+                                    <option>الماركة</option>
+                                  </select>
+                                </label>
+                                <label class="block">
+                                  <span> الصنف </span>
+                                  <select
+                                    class="form-select mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:bg-navy-700 dark:hover:border-navy-400 dark:focus:border-accent">
+                                    <option>الصنف </option>
+                                    <option>الصنف</option>
+                                    <option>الصنف</option>
+                                  </select>
+                                </label>
+                                <label class="block">
+                                  الموديل
+                                  <input
+                                    class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                    placeholder="الموديل" type="text" />
+                                </label>
+                                <label class="block">
+                                  السعر
+                                  <input
+                                    class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                    placeholder="السعر" type="text" />
+                                </label>
+                                <label class="block">
+                                  السيريال
+                                  <input
+                                    class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                    placeholder="السيريال" type="text" />
+                                </label>
+                                <label class="block">
+                                  صافي التكلفة
+                                  <input
+                                    class="form-input w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                                    placeholder="صافس التكلفة" type="text" />
+                                </label>
+                                <div class=" space-x-reverse space-x-2 text-right">
+                                  <button @click="showModal = false"
+                                    class="btn min-w-[7rem] rounded-full border border-slate-300 font-medium text-slate-800 hover:bg-slate-150 focus:bg-slate-150 active:bg-slate-150/80 dark:border-navy-450 dark:text-navy-50 dark:hover:bg-navy-500 dark:focus:bg-navy-500 dark:active:bg-navy-500/90">
+                                    إلغاء
+                                  </button>
+                                  <button @click="showModal = false"
+                                    class="btn min-w-[7rem] rounded-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
+                                    تعديل
+                                  </button>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </template>
-                      </div>
-                   
+                        </div>
+                      </template>
+                    </div>
+
                   </a>
                 </td>
               </tr>
